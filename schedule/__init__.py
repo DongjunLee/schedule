@@ -94,7 +94,9 @@ class Scheduler(object):
                     time.sleep(interval)
 
         continuous_thread = ScheduleThread()
+	continuous_thread.daemon = True
         continuous_thread.start()
+
         return cease_continuous_run
 
     def run_all(self, delay_seconds=0):

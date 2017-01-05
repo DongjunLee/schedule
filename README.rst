@@ -50,6 +50,8 @@ Usage
 
     while True:
         schedule.run_pending()
+	# if you want to run the scheduler in a different thread without blocking the main thread
+	# schedule.run_continuously(1)
         time.sleep(1)
 
 Documentation
